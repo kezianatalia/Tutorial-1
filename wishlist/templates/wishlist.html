@@ -1,9 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <!doctype html>
 
 <style>
+    h1, h3, p, th, td, table {text-align: center;}
     table, th, td, tr {
-        padding: 15px;
-        border-color: black;
+        padding: 10px;
+        border: 1px solid black;
         border-collapse: collapse;
     }
 
@@ -36,8 +41,8 @@
     </div>
   </nav>
 
-<h5>Nama: </h5>
-<p>{{nama}}</p>
+<h5>Username: {{user.username}}</h5>
+<h1 style="font-family:candara">{{nama}}'s Wishlist</h1>
 
 <table>
     <tr>
@@ -55,3 +60,5 @@
 {% endfor %}
 </table>
 <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+{% endblock content %}
